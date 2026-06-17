@@ -41,11 +41,19 @@ def mergeSort(list_to_sort_by_merge):
 
 import matplotlib.pyplot as plt
 
+# Sample data
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-x = range(len(my_list))
-plt.plot(x, my_list)
-plt.show()
-mergeSort(my_list)
-x = range(len(my_list))
-plt.plot(x, my_list)
+
+# Plot before sorting
+original = my_list.copy()
+
+# Sort the list
+merge_sort(my_list)
+
+# Plots comparison
+plt.plot(original, label="Before sorting")
+plt.plot(my_list, label="After sorting")
+
+plt.title("Merge Sort Comparison")
+plt.legend()
 plt.show()
