@@ -50,3 +50,23 @@ def merge_sort(list_to_sort):
         right_index += 1
         merged_index += 1
 
+
+import matplotlib.pyplot as plt
+
+# Sample data
+my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+
+# Plot before sorting
+original = my_list.copy()
+
+# Sort the list
+merge_sort(my_list)
+
+# Plots comparison
+plt.plot(original, label="Before sorting")
+plt.plot(my_list, label="After sorting")
+
+plt.title("Merge Sort Comparison")
+plt.legend()
+plt.show()
+
